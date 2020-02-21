@@ -38,13 +38,13 @@ def get_data():
 def feed():
     global META
     response.content_type = 'application/rss+xml; charset=UTF-8'
-    return template('templates/rss.xml', meta=META, items=get_data())
+    return template('templates/rss.xml', items=get_data(), meta=META)
 
 @app.get('/itunes/preview')
 def preview():
     global META
     response.content_type = 'application/rss+xml; charset=UTF-8'
-    return template('templates/rss.xml', meta=META, items=refresh())
+    return template('templates/rss.xml', items=refresh(), meta=META)
 
 @app.route('/feed/<filename:path>')
 def send_static(filename):
