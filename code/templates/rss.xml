@@ -1,0 +1,26 @@
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+    <title>Stillfe Literature Podcast</title>
+    <link>stil.life</link>
+    <description>Podcast Abstracts</description>
+    <language>ru-ru</language>
+    <copyright>Stillife</copyright>
+    <lastBuildDate>{{ items[0]['date'] }}</lastBuildDate>
+    <itunes:author>Stillife</itunes:author>
+    <itunes:summary>Stillfe Literature Podcast</itunes:summary>
+    <itunes:owner>
+        <itunes:name>Stan</itunes:name>
+        <itunes:email>stan@stillife.ru</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>No</itunes:explicit>
+    <itunes:image href="http://stillife.ru/feed/logo.png"/>
+    <itunes:category text="Literature" />
+    % for item in items:
+    <item>
+        <title>{{ item['title'] }}</title>
+        <description>{{ item['description'] }}</description>
+        <enclosure url="http://stillife.ru/feed/{{ item['file'] }}" type="audio/mpeg" length="{{ item['size'] }}" />
+    </item>
+    % end
+</channel>
+</rss>

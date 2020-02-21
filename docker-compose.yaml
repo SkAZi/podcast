@@ -1,0 +1,11 @@
+version: '2'
+services:
+    podcast_server:
+        build: .
+        volumes:
+            - ./data:/root/code/data
+        ports:
+            - "8000:8000"
+        entrypoint: python main.py
+        restart: unless-stopped
+        tty: true
