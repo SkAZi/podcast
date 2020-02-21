@@ -1,10 +1,21 @@
--
-  date: 2020-02-21T12:00:00
-  title: title
-  description: description
-  file: 1.mp3
--
-  date: 2020-02-21T12:00:00
-  title: title2
-  description: description2
-  file: 2.mp3
+meta:
+  base_url: http://stillife.ru/feed/
+  title: Stillfe Literature Podcast
+  link: stil.life
+  description: Podcast Abstracts
+  language: ru
+  copyright: Stillife
+  author: Stillife
+  summary: Stillfe Literature Podcast
+  owner_name: Stan
+  owner_email: stan@stillife.ru
+  explicit: 'No'
+  image: logo.png
+  keywords: literature,books,novels,литература,книги,рассказы
+  category: Literature
+stream:
+  -
+    date: 2020-02-21T12:00:00
+    title: title
+    description: description
+    file: 1.mp3

@@ -1,26 +1,26 @@
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-    <title>Stillfe Literature Podcast</title>
-    <link>stil.life</link>
-    <description>Podcast Abstracts</description>
-    <language>ru</language>
-    <copyright>Stillife</copyright>
+    <title>{{ meta['title'] }}</title>
+    <link>{{ meta['link'] }}</link>
+    <description>{{ meta['description'] }}</description>
+    <language>{{ meta['language'] }}</language>
+    <copyright>{{ meta['copyright'] }}</copyright>
     <lastBuildDate>{{ items[0]['date'] }}</lastBuildDate>
-    <itunes:author>Stillife</itunes:author>
-    <itunes:summary>Stillfe Literature Podcast</itunes:summary>
+    <itunes:author>{{ meta['author'] }}</itunes:author>
+    <itunes:summary>{{ meta['summary'] }}</itunes:summary>
     <itunes:owner>
-        <itunes:name>Stan</itunes:name>
-        <itunes:email>stan@stillife.ru</itunes:email>
+        <itunes:name>{{ meta['owner_name'] }}</itunes:name>
+        <itunes:email>{{ meta['owner_email'] }}</itunes:email>
     </itunes:owner>
-    <itunes:explicit>No</itunes:explicit>
-    <itunes:image href="http://stillife.ru/feed/logo.png"/>
-    <itunes:keywords>literaure,books,novels,литратура,книги,рассказы</itunes:keywords>
-    <itunes:category text="Literature" />
+    <itunes:explicit>{{ meta['explicit'] }}</itunes:explicit>
+    <itunes:image href="{{ meta['base_url'] }}{{ meta['image'] }}"/>
+    <itunes:keywords>{{ meta['keywords'] }}</itunes:keywords>
+    <itunes:category text="{{ meta['category'] }}" />
     % for item in items:
     <item>
         <title>{{ item['title'] }}</title>
         <description>{{ item['description'] }}</description>
-        <enclosure url="http://stillife.ru/feed/{{ item['file'] }}" type="audio/mpeg" length="{{ item['size'] }}" />
+        <enclosure url="{{ meta['base_url'] }}{{ item['file'] }}" type="audio/mpeg" length="{{ item['size'] }}" />
     </item>
     % end
 </channel>
