@@ -19,6 +19,7 @@ def refresh():
         try:
             size = os.path.getsize(os.path.join('data/files', item['file']))
             item['size'] = size
+            item['pubDate'] = item['date'].strftime("%a, %d %b %Y %H:%M:%S +0300")
             ret.append(item)
         except:
             pass

@@ -5,9 +5,9 @@
     <description>{{ meta['description'] }}</description>
     <language>{{ meta['language'] }}</language>
     <copyright>{{ meta['copyright'] }}</copyright>
-    <lastBuildDate>{{ items[0]['date'] }}</lastBuildDate>
     <itunes:author>{{ meta['author'] }}</itunes:author>
     <itunes:summary>{{ meta['summary'] }}</itunes:summary>
+    <itunes:subtitle>{{ meta['description'] }}</itunes:subtitle>
     <itunes:owner>
         <itunes:name>{{ meta['owner_name'] }}</itunes:name>
         <itunes:email>{{ meta['owner_email'] }}</itunes:email>
@@ -19,7 +19,8 @@
     % for item in items:
     <item>
         <title>{{ item['title'] }}</title>
-        <pubDate>{{ item['date'] }}</pubDate>
+        <itunes:subtitle>{{ item['description'] }}</itunes:subtitle>
+        <pubDate>{{ item['pubDate'] }}</pubDate>
         <description>{{ item['description'] }}</description>
         <enclosure url="{{ meta['base_url'] }}{{ item['file'] }}" type="audio/mpeg" length="{{ item['size'] }}" />
     </item>
