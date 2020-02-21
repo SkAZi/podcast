@@ -15,7 +15,7 @@
     <itunes:explicit>{{ meta['explicit'] }}</itunes:explicit>
     <itunes:image href="{{ meta['base_url'] }}{{ meta['image'] }}"/>
     <itunes:keywords>{{ meta['keywords'] }}</itunes:keywords>
-    <itunes:category text="{{ meta['category'] }}" />
+    <itunes:category text="{{ meta['category'] }}"><itunes:category text="{{ meta['sub_category'] }}" /></itunes:category>
     % for item in items:
     <item>
         <title>{{ item['title'] }}</title>
