@@ -19,6 +19,7 @@
     % for item in items:
     <item>
         <title>{{ item['title'] }}</title>
+        <pubDate>{{ item['date'] }}</pubDate>
         <description>{{ item['description'] }}</description>
         <enclosure url="{{ meta['base_url'] }}{{ item['file'] }}" type="audio/mpeg" length="{{ item['size'] }}" />
     </item>
