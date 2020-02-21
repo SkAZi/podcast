@@ -12,7 +12,8 @@ meta:
   explicit: 'No'
   image: logo.png
   keywords: literature,books,novels,литература,книги,рассказы
-  category: Literature
+  category: Arts
+  sub_category: Books
 stream:
   -
     date: 2020-02-21T12:00:00
