@@ -3,7 +3,7 @@
     <title>Stillfe Literature Podcast</title>
     <link>stil.life</link>
     <description>Podcast Abstracts</description>
-    <language>ru-ru</language>
+    <language>ru</language>
     <copyright>Stillife</copyright>
     <lastBuildDate>{{ items[0]['date'] }}</lastBuildDate>
     <itunes:author>Stillife</itunes:author>
@@ -14,6 +14,7 @@
     </itunes:owner>
     <itunes:explicit>No</itunes:explicit>
     <itunes:image href="http://stillife.ru/feed/logo.png"/>
+    <itunes:keywords>literaure,books,novels,литратура,книги,рассказы</itunes:keywords>
     <itunes:category text="Literature" />
     % for item in items:
     <item>
