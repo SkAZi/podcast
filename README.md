@@ -1,3 +1,5 @@
+Simple Podcast Feed server for iTunes Podcasts.
+
 # Install
 
 ```
